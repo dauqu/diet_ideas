@@ -1,3 +1,4 @@
+import 'package:diet_ideas/components/bottom_navigation.dart';
 import 'package:diet_ideas/pages/forgot_password.dart';
 import 'package:diet_ideas/pages/register.dart';
 import 'package:flutter/material.dart';
@@ -153,7 +154,13 @@ class _LoginState extends State<Login> {
                 width: double.infinity,
                 height: 50,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    //Goto bottom navigation bar
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const BottomNavigation()));
+                  },
                   style: ElevatedButton.styleFrom(
                       primary: const Color(0xFF40D4AF),
                       shape: RoundedRectangleBorder(
