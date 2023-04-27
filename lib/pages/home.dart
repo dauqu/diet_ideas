@@ -1,3 +1,4 @@
+import 'package:diet_ideas/pages/notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -31,12 +32,19 @@ class _HomeState extends State<Home> {
           centerTitle: true,
           actions: [
             IconButton(
+              splashRadius: 25,
               icon: const Icon(
                 Icons.notifications_outlined,
                 color: Color(0xFF0047BA),
                 size: 30,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const NotificationsPage()),
+                );
+              },
             ),
             const SizedBox(
               width: 10,
@@ -47,7 +55,6 @@ class _HomeState extends State<Home> {
             child: Column(
           children: [
             Container(
-              color: Color.fromARGB(255, 0, 142, 224),
               height: 200,
               child: PageView(
                 scrollDirection: Axis.vertical,
@@ -58,7 +65,6 @@ class _HomeState extends State<Home> {
                       image: DecorationImage(
                         image: NetworkImage(
                             "https://assets.lybrate.com/q_auto:eco,f_auto,w_850/imgs/product/kwds/diet-chart/Diet-Chart-For-Kids-v1.jpg"),
-                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
@@ -68,7 +74,6 @@ class _HomeState extends State<Home> {
                       image: DecorationImage(
                         image: NetworkImage(
                             "https://assets.lybrate.com/q_auto:eco,f_auto,w_850/imgs/product/kwds/diet-chart/Diet-Chart-For-Kids-v1.jpg"),
-                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
@@ -78,12 +83,15 @@ class _HomeState extends State<Home> {
                       image: DecorationImage(
                         image: NetworkImage(
                             "https://assets.lybrate.com/q_auto:eco,f_auto,w_850/imgs/product/kwds/diet-chart/Diet-Chart-For-Kids-v1.jpg"),
-                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
                 ],
               ),
+            ),
+
+            const SizedBox(
+              height: 20,
             ),
 
             //GridView

@@ -18,6 +18,9 @@ class _ChatPageState extends State<ChatPage> {
         backgroundColor: Colors.white,
         title:
             const Text('Conversations', style: TextStyle(color: Colors.black)),
+        centerTitle: false,
+        leading: Text(""),
+        leadingWidth: 0,
       ),
       body: Container(
         color: Colors.white,
@@ -26,13 +29,13 @@ class _ChatPageState extends State<ChatPage> {
             //Search bar
             Container(
               margin: const EdgeInsets.all(10),
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: Colors.grey[200],
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(5),
               ),
-              child: TextField(
-                decoration: const InputDecoration(
+              child: const TextField(
+                decoration: InputDecoration(
                   hintText: 'Search',
                   border: InputBorder.none,
                   icon: Icon(Icons.search),
@@ -41,52 +44,51 @@ class _ChatPageState extends State<ChatPage> {
             ),
             //List of conversations
             ListTile(
-              leading: Container(
+              leading: SizedBox(
                 width: 50,
                 height: 50,
-                child: const Placeholder(
-                  color: Colors.grey,
-                ),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.network(
+                        "https://shotkit.com/wp-content/uploads/bb-plugin/cache/cool-profile-pic-matheus-ferrero-landscape.jpeg",
+                        fit: BoxFit.cover)),
               ),
-              title: const Text('John Doe'),
-              subtitle: const Text('Hello, how are you?'),
-              trailing: const Text('10:00'),
+              title: const Text('Dr Jane Doe'),
+              subtitle:
+                  const Text('That’s great, I look forward to hearing ba...'),
+              trailing: Column(
+                children: const [
+                  Text('10:00'),
+                  //1 message icon
+                  Icon(
+                    Icons.error_outline,
+                    color: Colors.blue,
+                  ),
+                ],
+              ),
             ),
             ListTile(
-              leading: Container(
+              leading: SizedBox(
                 width: 50,
                 height: 50,
-                child: const Placeholder(
-                  color: Colors.grey,
-                ),
+                child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.network(
+                        "https://shotkit.com/wp-content/uploads/bb-plugin/cache/cool-profile-pic-matheus-ferrero-landscape.jpeg",
+                        fit: BoxFit.cover)),
               ),
-              title: const Text('John Doe'),
-              subtitle: const Text('Hello, how are you?'),
-              trailing: const Text('10:00'),
-            ),
-            ListTile(
-              leading: Container(
-                width: 50,
-                height: 50,
-                child: const Placeholder(
-                  color: Colors.grey,
-                ),
+              title: const Text('Diet Ideas Admin'),
+              subtitle: const Text('@Ovo How is it going?'),
+              trailing: Column(
+                children: const [
+                  Text('10:00'),
+                  //Check Icon
+                  Icon(
+                    Icons.check,
+                    color: Colors.blue,
+                  ),
+                ],
               ),
-              title: const Text('John Doe'),
-              subtitle: const Text('Hello, how are you?'),
-              trailing: const Text('10:00'),
-            ),
-            ListTile(
-              leading: Container(
-                width: 50,
-                height: 50,
-                child: const Placeholder(
-                  color: Colors.grey,
-                ),
-              ),
-              title: const Text('John Doe'),
-              subtitle: const Text('Hello, how are you?'),
-              trailing: const Text('10:00'),
             ),
           ],
         ),

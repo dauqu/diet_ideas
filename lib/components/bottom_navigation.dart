@@ -1,4 +1,3 @@
-import 'package:diet_ideas/main.dart';
 import 'package:diet_ideas/pages/chat.dart';
 import 'package:diet_ideas/pages/home.dart';
 import 'package:diet_ideas/pages/schedule.dart';
@@ -15,8 +14,6 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Home(),
     ChatPage(),
@@ -38,6 +35,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        landscapeLayout: BottomNavigationBarLandscapeLayout.centered,
         type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
