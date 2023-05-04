@@ -1,3 +1,4 @@
+import 'package:diet_ideas/pages/messages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -68,6 +69,10 @@ class _ChatPageState extends State<ChatPage> {
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Message()));
+              },
               leading: SizedBox(
                 width: 50,
                 height: 50,

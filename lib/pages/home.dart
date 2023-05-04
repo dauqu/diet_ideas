@@ -1,3 +1,7 @@
+import 'package:diet_ideas/pages/feedback.dart';
+import 'package:diet_ideas/pages/my_diet_program.dart';
+import 'package:diet_ideas/pages/my_diet_program_1.dart';
+import 'package:diet_ideas/pages/my_diet_program_2.dart';
 import 'package:diet_ideas/pages/notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -105,29 +109,38 @@ class _HomeState extends State<Home> {
                 mainAxisSpacing: 10,
                 childAspectRatio: 0.8,
                 children: [
-                  Card(
-                    margin: const EdgeInsets.all(0),
-                    color: Color(0xFF0F46B3),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/diet 1.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'My Diet Program',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MyDietProgram()),
+                      );
+                    },
+                    child: Card(
+                      margin: const EdgeInsets.all(0),
+                      color: Color(0xFF0F46B3),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/diet 1.png',
+                            width: 50,
+                            height: 50,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'My Diet Program',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Card(
@@ -155,54 +168,72 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                   ),
-                  Card(
-                    margin: const EdgeInsets.all(0),
-                    color: Color(0xFFF06E7F),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/feedback (1) 1.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'Feedback',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FeedBack()),
+                      );
+                    },
+                    child: Card(
+                      margin: const EdgeInsets.all(0),
+                      color: Color(0xFFF06E7F),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/feedback (1) 1.png',
+                            width: 50,
+                            height: 50,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'Feedback',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Card(
-                    margin: const EdgeInsets.all(0),
-                    color: Color(0xFFFECA1F),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/medical-file 1.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'My Diet Program',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MyDietProgram1()),
+                      );
+                    },
+                    child: Card(
+                      margin: const EdgeInsets.all(0),
+                      color: Color(0xFFFECA1F),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/medical-file 1.png',
+                            width: 50,
+                            height: 50,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'My Diet Program',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Card(
@@ -255,54 +286,72 @@ class _HomeState extends State<Home> {
                       ],
                     ),
                   ),
-                  Card(
-                    margin: const EdgeInsets.all(0),
-                    color: Color(0xFFE2E2E2),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/shopping-bag 1.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'My Diet Program',
-                          style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MyDietProgram2()),
+                      );
+                    },
+                    child: Card(
+                      margin: const EdgeInsets.all(0),
+                      color: Color(0xFFE2E2E2),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/shopping-bag 1.png',
+                            width: 50,
+                            height: 50,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'My Diet Program',
+                            style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Card(
-                    margin: const EdgeInsets.all(0),
-                    color: Color(0xFFE2E2E2),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/diet (1) 1.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'My Diet Program',
-                          style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const MyDietProgram2()),
+                      );
+                    },
+                    child: Card(
+                      margin: const EdgeInsets.all(0),
+                      color: Color(0xFFE2E2E2),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/diet (1) 1.png',
+                            width: 50,
+                            height: 50,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'My Diet Program',
+                            style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
