@@ -95,12 +95,48 @@ class _MealLogState extends State<MealLog> {
       body: Container(
           padding: const EdgeInsets.all(10),
           child: Column(
-            children: const [
-              TextField(
-                
+            children: [
+              const TextField(
+                decoration: InputDecoration(
+                  isDense: true,
+                  hintText: 'Search',
+                  prefixIcon: Icon(Icons.search),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                  ),
+                ),
               ),
-              SizedBox(
+              const SizedBox(
+                height: 20,
+              ),
+              Image.asset("assets/images/circle.png"),
+              const SizedBox(
                 height: 10,
+              ),
+              const ListTile(
+                tileColor: Color(0xFFE6F1F8),
+                title: Text('Coffee with Milk'),
+                subtitle: Text('219 kcal'),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const ListTile(
+                tileColor: Color(0xFFE6F1F8),
+                title: Text('Sandwich'),
+                subtitle: Text('300 kcal'),
+              ),
+              const ListTile(
+                tileColor: Color(0xFFE6F1F8),
+                title: Text('Tomato'),
+                subtitle: Text('50 kcal'),
+              ),
+              const ListTile(
+                tileColor: Color(0xFFE6F1F8),
+                title: Text('Cucumber'),
+                subtitle: Text('50 kcal'),
               ),
             ],
           )),
