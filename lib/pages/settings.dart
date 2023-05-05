@@ -1,4 +1,7 @@
+import 'package:diet_ideas/pages/settings/dietitian_biodata.dart';
 import 'package:diet_ideas/pages/settings/my_accounts.dart';
+import 'package:diet_ideas/pages/settings/receipt.dart';
+import 'package:diet_ideas/pages/settings/service_prohtamme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -72,7 +75,7 @@ class _SettingsState extends State<Settings> {
                                       backgroundColor: Color(0xFF0047BA),
                                       child: Icon(Icons.person)))),
                         ),
-                        title: const Text('My Account '),
+                        title: const Text('My Account'),
                         subtitle: const Text('Make changes to your account'),
                         trailing: const Icon(Icons.arrow_forward_ios),
                       ),
@@ -81,7 +84,7 @@ class _SettingsState extends State<Settings> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const MyAccounts(),
+                              builder: (context) => const ServiceProgramme(),
                             ),
                           );
                         },
@@ -104,7 +107,7 @@ class _SettingsState extends State<Settings> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const MyAccounts(),
+                              builder: (context) => const Receipt(),
                             ),
                           );
                         },
@@ -129,7 +132,7 @@ class _SettingsState extends State<Settings> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const MyAccounts(),
+                              builder: (context) => const DietitianBiodata(),
                             ),
                           );
                         },
@@ -154,7 +157,7 @@ class _SettingsState extends State<Settings> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const MyAccounts(),
+                              builder: (context) => const DietitianBiodata(),
                             ),
                           );
                         },

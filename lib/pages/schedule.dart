@@ -1,3 +1,4 @@
+import 'package:diet_ideas/pages/reschedule_appointment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -230,6 +231,37 @@ class _ScheduledState extends State<Scheduled> {
                   ],
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                SizedBox(
+                  width: 200,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const RescheduleAppointment()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      elevation: 2,
+                      primary: const Color(0xFF70D2B0),
+                      onPrimary: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                    ),
+                    child: const Text("NEW APPOINTMENT"),
+                  ),
+                ),
+              ],
             )
           ],
         ));
