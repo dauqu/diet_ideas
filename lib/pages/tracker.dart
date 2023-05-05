@@ -69,9 +69,14 @@ class _TrackerState extends State<Tracker> {
                       Container(
                         padding: const EdgeInsets.all(10),
                         child: const CircleAvatar(
-                          radius: 30,
-                          child: Placeholder(),
-                        ),
+                            radius: 30,
+                            child: CircleAvatar(
+                              backgroundColor: Color(0xFF40D4AF),
+                              radius: 28,
+                              child: CircleAvatar(
+                                child: Text("65%"),
+                              ),
+                            )),
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,

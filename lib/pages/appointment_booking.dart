@@ -38,7 +38,17 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SfDateRangePicker(),
+                Card(
+                    elevation: 1,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: SfDateRangePicker(
+                      view: DateRangePickerView.month,
+                      selectionMode: DateRangePickerSelectionMode.range,
+                      onSelectionChanged:
+                          (DateRangePickerSelectionChangedArgs args) {},
+                    )),
                 const SizedBox(height: 10),
                 //Horizentel Scroll
                 const Text(
@@ -157,7 +167,7 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                         ),
                       ],
                     )),
-                const SizedBox(height: 10),
+                const SizedBox(height: 30),
                 Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -180,13 +190,19 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               Column(
-                                children: const [
-                                  Text("Date",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold)),
-                                  SizedBox(height: 10),
-                                  Text("12/12/2021",
+                                children: [
+                                  Row(
+                                    children: const [
+                                      Icon(Icons.calendar_today),
+                                      SizedBox(width: 10),
+                                      Text("Date",
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold)),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 10),
+                                  const Text("12/12/2021",
                                       style: TextStyle(fontSize: 20)),
                                 ],
                               ),
@@ -199,13 +215,19 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                                 ),
                               ),
                               Column(
-                                children: const [
-                                  Text("Time",
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.bold)),
-                                  SizedBox(height: 10),
-                                  Text("10:00 AM",
+                                children: [
+                                  Row(
+                                    children: const [
+                                      Icon(Icons.access_time),
+                                      SizedBox(width: 10),
+                                      Text("Time",
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold)),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 10),
+                                  const Text("10:00 AM",
                                       style: TextStyle(fontSize: 20)),
                                 ],
                               ),
@@ -217,11 +239,187 @@ class _AppointmentBookingState extends State<AppointmentBooking> {
                             height: 50,
                             child: ElevatedButton(
                               onPressed: () {
-                                // Navigator.push(
-                                //   context,
-                                //   MaterialPageRoute(
-                                //       builder: (context) => const ServiceProgramme()),
-                                // );
+                                showDialog<void>(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return SimpleDialog(
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(20)),
+                                      children: [
+                                        Container(
+                                          padding: const EdgeInsets.all(10),
+                                          height: 300,
+                                          width: double.infinity,
+                                          child: Column(
+                                            children: [
+                                              const Text("Service Name",
+                                                  style: TextStyle(
+                                                      fontSize: 18,
+                                                      fontWeight:
+                                                          FontWeight.bold)),
+                                              const SizedBox(height: 10),
+                                              const Text("Service Programme 1",
+                                                  style:
+                                                      TextStyle(fontSize: 20)),
+                                              const SizedBox(height: 50),
+                                              Row(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceAround,
+                                                children: [
+                                                  Column(
+                                                    children: [
+                                                      Row(
+                                                        children: const [
+                                                          Icon(Icons
+                                                              .calendar_today),
+                                                          SizedBox(width: 10),
+                                                          Text("Date",
+                                                              style: TextStyle(
+                                                                  fontSize: 18,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold)),
+                                                        ],
+                                                      ),
+                                                      const SizedBox(
+                                                          height: 10),
+                                                      const Text("12/12/2021",
+                                                          style: TextStyle(
+                                                              fontSize: 20)),
+                                                    ],
+                                                  ),
+                                                  //Divider
+                                                  const SizedBox(
+                                                    height: 50,
+                                                    child: VerticalDivider(
+                                                      color: Colors.black,
+                                                      thickness: 1,
+                                                    ),
+                                                  ),
+                                                  Column(
+                                                    children: [
+                                                      Row(
+                                                        children: const [
+                                                          Icon(Icons
+                                                              .access_time),
+                                                          SizedBox(width: 10),
+                                                          Text("Time",
+                                                              style: TextStyle(
+                                                                  fontSize: 18,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold)),
+                                                        ],
+                                                      ),
+                                                      const SizedBox(
+                                                          height: 10),
+                                                      const Text("10:00 AM",
+                                                          style: TextStyle(
+                                                              fontSize: 20)),
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
+                                              const SizedBox(
+                                                height: 50,
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Expanded(
+                                                    child: ElevatedButton(
+                                                      onPressed: () {},
+                                                      style: ElevatedButton
+                                                          .styleFrom(
+                                                        backgroundColor:
+                                                            const Color(
+                                                                0xFF0047BA),
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .symmetric(
+                                                                horizontal: 20,
+                                                                vertical: 15),
+                                                        textStyle:
+                                                            const TextStyle(
+                                                                fontSize: 20,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                        shape: RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10)),
+                                                      ),
+                                                      child:
+                                                          const Text("Confirm"),
+                                                    ),
+                                                  ),
+                                                  const SizedBox(
+                                                    width: 20,
+                                                  ),
+                                                  Expanded(
+                                                    child: ElevatedButton(
+                                                      onPressed: () {},
+                                                      style: ElevatedButton
+                                                          .styleFrom(
+                                                        primary: const Color(
+                                                            0xFFFF0000),
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .symmetric(
+                                                                horizontal: 20,
+                                                                vertical: 15),
+                                                        textStyle:
+                                                            const TextStyle(
+                                                                fontSize: 20,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                        shape: RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10)),
+                                                      ),
+                                                      child:
+                                                          const Text("Cancel"),
+                                                    ),
+                                                  ),
+                                                ],
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                      // actions: <Widget>[
+                                      //   TextButton(
+                                      //     style: TextButton.styleFrom(
+                                      //       textStyle: Theme.of(context)
+                                      //           .textTheme
+                                      //           .labelLarge,
+                                      //     ),
+                                      //     child: const Text('Disable'),
+                                      //     onPressed: () {
+                                      //       Navigator.of(context).pop();
+                                      //     },
+                                      //   ),
+                                      //   TextButton(
+                                      //     style: TextButton.styleFrom(
+                                      //       textStyle: Theme.of(context)
+                                      //           .textTheme
+                                      //           .labelLarge,
+                                      //     ),
+                                      //     child: const Text('Enable'),
+                                      //     onPressed: () {
+                                      //       Navigator.of(context).pop();
+                                      //     },
+                                      //   ),
+                                      // ],
+                                    );
+                                  },
+                                );
                               },
                               style: ElevatedButton.styleFrom(
                                 foregroundColor: Colors.white,

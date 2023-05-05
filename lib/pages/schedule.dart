@@ -342,25 +342,25 @@ class _HistoryState extends State<History> {
                         ],
                       ),
                       const SizedBox(width: 10),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const RescheduleAppointment()),
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0,
-                          primary: const Color(0xFF0047BA),
-                          onPrimary: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                        ),
-                        child: const Text("Reschedule"),
-                      )
+                      // ElevatedButton(
+                      //   onPressed: () {
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(
+                      //           builder: (context) =>
+                      //               const RescheduleAppointment()),
+                      //     );
+                      //   },
+                      //   style: ElevatedButton.styleFrom(
+                      //     elevation: 0,
+                      //     primary: const Color(0xFF0047BA),
+                      //     onPrimary: Colors.white,
+                      //     shape: RoundedRectangleBorder(
+                      //       borderRadius: BorderRadius.circular(5),
+                      //     ),
+                      //   ),
+                      //   child: const Text("Reschedule"),
+                      // )
                     ],
                   )
                 ],
@@ -413,25 +413,25 @@ class _HistoryState extends State<History> {
                         ],
                       ),
                       const SizedBox(width: 10),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const RescheduleAppointment()),
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0,
-                          primary: const Color(0xFF0047BA),
-                          onPrimary: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                        ),
-                        child: const Text("Reschedule"),
-                      )
+                      // ElevatedButton(
+                      //   onPressed: () {
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(
+                      //           builder: (context) =>
+                      //               const RescheduleAppointment()),
+                      //     );
+                      //   },
+                      //   style: ElevatedButton.styleFrom(
+                      //     elevation: 0,
+                      //     primary: const Color(0xFF0047BA),
+                      //     onPrimary: Colors.white,
+                      //     shape: RoundedRectangleBorder(
+                      //       borderRadius: BorderRadius.circular(5),
+                      //     ),
+                      //   ),
+                      //   child: const Text("Reschedule"),
+                      // )
                     ],
                   )
                 ],
@@ -484,25 +484,25 @@ class _HistoryState extends State<History> {
                         ],
                       ),
                       const SizedBox(width: 10),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const RescheduleAppointment()),
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0,
-                          primary: const Color(0xFF0047BA),
-                          onPrimary: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                        ),
-                        child: const Text("Reschedule"),
-                      )
+                      // ElevatedButton(
+                      //   onPressed: () {
+                      //     Navigator.push(
+                      //       context,
+                      //       MaterialPageRoute(
+                      //           builder: (context) =>
+                      //               const RescheduleAppointment()),
+                      //     );
+                      //   },
+                      //   style: ElevatedButton.styleFrom(
+                      //     elevation: 0,
+                      //     primary: const Color(0xFF0047BA),
+                      //     onPrimary: Colors.white,
+                      //     shape: RoundedRectangleBorder(
+                      //       borderRadius: BorderRadius.circular(5),
+                      //     ),
+                      //   ),
+                      //   child: const Text("Reschedule"),
+                      // )
                     ],
                   )
                 ],
