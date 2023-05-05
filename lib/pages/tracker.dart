@@ -1,3 +1,4 @@
+import 'package:diet_ideas/pages/meal_plan.dart';
 import 'package:diet_ideas/pages/notifications.dart';
 import 'package:flutter/material.dart';
 
@@ -99,29 +100,39 @@ class _TrackerState extends State<Tracker> {
                   mainAxisSpacing: 10,
                   childAspectRatio: 0.8,
                   children: [
-                    Card(
-                      margin: const EdgeInsets.all(0),
-                      color: const Color(0xFF0F46B3),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assets/images/plan 1.png',
-                            width: 50,
-                            height: 50,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MealPlan(),
                           ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          const Text(
-                            'Meal Plan',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                        );
+                      },
+                      child: Card(
+                        margin: const EdgeInsets.all(0),
+                        color: const Color(0xFF0F46B3),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/plan 1.png',
+                              width: 50,
+                              height: 50,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text(
+                              'Meal Plan',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     Card(
@@ -149,30 +160,40 @@ class _TrackerState extends State<Tracker> {
                         ],
                       ),
                     ),
-                    Card(
-                      margin: const EdgeInsets.all(0),
-                      // color: Color(0xFFF06E7F),
-                      color: const Color(0xFF6CCFAE),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assets/images/Group.png',
-                            width: 50,
-                            height: 50,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const NotificationsPage(),
                           ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          const Text(
-                            'Blood Component Tracker',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                        );
+                      },
+                      child: Card(
+                        margin: const EdgeInsets.all(0),
+                        // color: Color(0xFFF06E7F),
+                        color: const Color(0xFF6CCFAE),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/Group.png',
+                              width: 50,
+                              height: 50,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text(
+                              'Blood Component Tracker',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
