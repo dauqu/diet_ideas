@@ -156,7 +156,6 @@ class _MessageState extends State<Message> {
           children: [
             Expanded(
               child: ListView.builder(
-                physics: const BouncingScrollPhysics(),
                 //List order
                 reverse: true,
 

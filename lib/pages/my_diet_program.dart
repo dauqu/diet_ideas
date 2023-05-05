@@ -1,3 +1,4 @@
+import 'package:diet_ideas/pages/notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -14,16 +15,46 @@ class _MyDietProgramState extends State<MyDietProgram> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color(0xFFB8D8EB),
-          leading: IconButton(
-            splashRadius: 20,
-            onPressed: () {
-              Navigator.pop(context);
-            }, // 1
-            icon: const Icon(Icons.arrow_back_ios, color: Colors.black),
+          elevation: 0,
+          //Rounded image leading
+          leading: Container(
+            padding: const EdgeInsets.all(5),
+            width: 30,
+            height: 30,
+            child: const CircleAvatar(
+              backgroundImage: AssetImage('assets/images/Mask group.png'),
+              radius: 30,
+            ),
           ),
-          title: const Text('My Diet Program',
-              style: TextStyle(color: Colors.black)),
+          backgroundColor: const Color(0xFFB8D8EB),
+          title: Column(
+            children: const [
+              Text('Hello, Masfara!', style: TextStyle(color: Colors.black)),
+              Text('Today Wed, Dec 28',
+                  style: TextStyle(fontSize: 12, color: Color(0xFF0047BA))),
+            ],
+          ),
+          centerTitle: true,
+          actions: [
+            IconButton(
+              splashRadius: 25,
+              icon: const Icon(
+                Icons.notifications_outlined,
+                color: Color(0xFF0047BA),
+                size: 30,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const NotificationsPage()),
+                );
+              },
+            ),
+            const SizedBox(
+              width: 10,
+            )
+          ],
         ),
         body: SingleChildScrollView(
           child: Container(

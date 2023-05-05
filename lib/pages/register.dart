@@ -202,6 +202,11 @@ class _RegisterState extends State<Register> {
                       ),
                       const TextField(
                         decoration: InputDecoration(
+                            suffixIcon: Icon(
+                              Icons.arrow_drop_down_rounded,
+                              size: 20,
+                              color: Colors.white,
+                            ),
                             hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white)),
@@ -244,6 +249,11 @@ class _RegisterState extends State<Register> {
                       ),
                       const TextField(
                         decoration: InputDecoration(
+                            suffixIcon: Icon(
+                              Icons.arrow_drop_down_rounded,
+                              size: 20,
+                              color: Colors.white,
+                            ),
                             hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white)),
@@ -286,6 +296,11 @@ class _RegisterState extends State<Register> {
                       ),
                       const TextField(
                         decoration: InputDecoration(
+                            suffixIcon: Icon(
+                              Icons.remove_red_eye,
+                              size: 20,
+                              color: Colors.white,
+                            ),
                             hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white)),
@@ -307,6 +322,11 @@ class _RegisterState extends State<Register> {
                       ),
                       const TextField(
                         decoration: InputDecoration(
+                            suffixIcon: Icon(
+                              Icons.remove_red_eye,
+                              size: 20,
+                              color: Colors.white,
+                            ),
                             hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white)),
