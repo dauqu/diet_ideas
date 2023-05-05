@@ -59,29 +59,33 @@ class _TrackerState extends State<Tracker> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 color: const Color(0xFF0F46B3),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(10),
-                      child: const CircleAvatar(
-                        radius: 30,
-                        child: Placeholder(),
+                child: Container(
+                  padding: const EdgeInsets.all(10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        child: const CircleAvatar(
+                          radius: 30,
+                          child: Placeholder(),
+                        ),
                       ),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text('Service Program 1',
-                            style:
-                                TextStyle(color: Colors.white, fontSize: 18)),
-                        Text('Exp : 31 Dec 2022',
-                            style: TextStyle(
-                                color: Color(0xFF40D4AF), fontSize: 22)),
-                      ],
-                    ),
-                    const SizedBox(width: 100),
-                    const Icon(Icons.edit, color: Colors.white, size: 30),
-                  ],
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text('Service Program 1',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18)),
+                          Text('Exp : 31 Dec 2022',
+                              style: TextStyle(
+                                  color: Color(0xFF40D4AF), fontSize: 22)),
+                        ],
+                      ),
+                      // const SizedBox(width: 100),
+                      const Icon(Icons.edit, color: Colors.white, size: 30),
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(height: 10),
@@ -89,7 +93,7 @@ class _TrackerState extends State<Tracker> {
                 padding: const EdgeInsets.all(10),
                 child: GridView.count(
                   shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
+                  // physics: const NeverScrollableScrollPhysics(),
                   crossAxisCount: 3,
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
@@ -97,7 +101,7 @@ class _TrackerState extends State<Tracker> {
                   children: [
                     Card(
                       margin: const EdgeInsets.all(0),
-                      color: Color(0xFF0F46B3),
+                      color: const Color(0xFF0F46B3),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -148,7 +152,7 @@ class _TrackerState extends State<Tracker> {
                     Card(
                       margin: const EdgeInsets.all(0),
                       // color: Color(0xFFF06E7F),
-                      color: Color(0xFF6CCFAE),
+                      color: const Color(0xFF6CCFAE),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
