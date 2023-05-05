@@ -1,3 +1,4 @@
+import 'package:diet_ideas/pages/daily_mean.dart';
 import 'package:diet_ideas/pages/meal_plan.dart';
 import 'package:diet_ideas/pages/notifications.dart';
 import 'package:flutter/material.dart';
@@ -105,7 +106,7 @@ class _TrackerState extends State<Tracker> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const MealPlan(),
+                            builder: (context) => const DailyMeal(),
                           ),
                         );
                       },

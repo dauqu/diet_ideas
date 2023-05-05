@@ -77,7 +77,40 @@ class MealPlans extends StatefulWidget {
 class _MealPlansState extends State<MealPlans> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Container(
+          padding: const EdgeInsets.all(10),
+          child: Column(
+            children: [
+              const TextField(
+                decoration: InputDecoration(
+                  isDense: true,
+                  hintText: 'Search',
+                  prefixIcon: Icon(Icons.search),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Image.asset("assets/images/circle.png"),
+              const SizedBox(
+                height: 10,
+              ),
+              const Center(
+                child: Text(
+                  "No new meals have been added\n, Search for and add your meal \nnow!",
+                  style: TextStyle(),
+                  textAlign: TextAlign.center,
+                ),
+              )
+            ],
+          )),
+    );
   }
 }
 
@@ -115,29 +148,78 @@ class _MealLogState extends State<MealLog> {
               const SizedBox(
                 height: 10,
               ),
-              const ListTile(
-                tileColor: Color(0xFFE6F1F8),
-                title: Text('Coffee with Milk'),
-                subtitle: Text('219 kcal'),
-              ),
+              ListTile(
+                  tileColor: const Color(0xFFE6F1F8),
+                  title: const Text('Coffee with Milk'),
+                  subtitle: Row(
+                    children: const [
+                      //White dot
+                      CircleAvatar(
+                        backgroundColor: Colors.black,
+                        radius: 5,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text('219 kcal'),
+                    ],
+                  )),
               const SizedBox(
                 height: 10,
               ),
-              const ListTile(
-                tileColor: Color(0xFFE6F1F8),
-                title: Text('Sandwich'),
-                subtitle: Text('300 kcal'),
+              ListTile(
+                  tileColor: Color(0xFFE6F1F8),
+                  title: const Text('Sandwich'),
+                  subtitle: Row(
+                    children: const [
+                      //White dot
+                      CircleAvatar(
+                        radius: 5,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text('300 kcal'),
+                    ],
+                  )),
+              const SizedBox(
+                height: 10,
               ),
-              const ListTile(
-                tileColor: Color(0xFFE6F1F8),
-                title: Text('Tomato'),
-                subtitle: Text('50 kcal'),
+              ListTile(
+                  tileColor: Color(0xFFE6F1F8),
+                  title: Text('Tomato'),
+                  subtitle: Row(
+                    children: const [
+                      //White dot
+                      CircleAvatar(
+                        backgroundColor: Colors.green,
+                        radius: 5,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text('219 kcal'),
+                    ],
+                  )),
+              const SizedBox(
+                height: 10,
               ),
-              const ListTile(
-                tileColor: Color(0xFFE6F1F8),
-                title: Text('Cucumber'),
-                subtitle: Text('50 kcal'),
-              ),
+              ListTile(
+                  tileColor: Color(0xFFE6F1F8),
+                  title: Text('Cucumber'),
+                  subtitle: Row(
+                    children: const [
+                      //White dot
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        radius: 5,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text('219 kcal'),
+                    ],
+                  )),
             ],
           )),
     );
