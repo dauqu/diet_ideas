@@ -1,3 +1,4 @@
+import 'package:diet_ideas/pages/appointment_booking.dart';
 import 'package:diet_ideas/pages/reschedule_appointment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -148,7 +149,14 @@ class _ScheduledState extends State<Scheduled> {
                         ),
                         const SizedBox(width: 10),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const RescheduleAppointment()),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             elevation: 0,
                             primary: const Color(0xFF0047BA),
@@ -215,7 +223,14 @@ class _ScheduledState extends State<Scheduled> {
                         ),
                         const SizedBox(width: 10),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const RescheduleAppointment()),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             elevation: 0,
                             primary: const Color(0xFF0047BA),
@@ -246,8 +261,7 @@ class _ScheduledState extends State<Scheduled> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                const RescheduleAppointment()),
+                            builder: (context) => const AppointmentBooking()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
@@ -329,7 +343,14 @@ class _HistoryState extends State<History> {
                       ),
                       const SizedBox(width: 10),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const RescheduleAppointment()),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           elevation: 0,
                           primary: const Color(0xFF0047BA),
@@ -393,7 +414,14 @@ class _HistoryState extends State<History> {
                       ),
                       const SizedBox(width: 10),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const RescheduleAppointment()),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           elevation: 0,
                           primary: const Color(0xFF0047BA),
@@ -457,7 +485,14 @@ class _HistoryState extends State<History> {
                       ),
                       const SizedBox(width: 10),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const RescheduleAppointment()),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           elevation: 0,
                           primary: const Color(0xFF0047BA),

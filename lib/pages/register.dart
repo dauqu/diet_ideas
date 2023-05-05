@@ -23,14 +23,12 @@ class _RegisterState extends State<Register> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  height: 100,
+                  height: 50,
                 ),
-                const SizedBox(
-                  width: 100,
-                  height: 100,
-                  child: Placeholder(
-                    color: Colors.white,
-                  ),
+                SizedBox(
+                  width: 150,
+                  height: 150,
+                  child: Image.asset("assets/images/101963.png"),
                 ),
                 const SizedBox(
                   height: 20,
@@ -223,7 +221,7 @@ class _RegisterState extends State<Register> {
                       const SizedBox(
                         height: 5,
                       ),
-                       const TextField(
+                      const TextField(
                         decoration: InputDecoration(
                             hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(
@@ -244,7 +242,7 @@ class _RegisterState extends State<Register> {
                       const SizedBox(
                         height: 5,
                       ),
-                       const TextField(
+                      const TextField(
                         decoration: InputDecoration(
                             hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(
@@ -265,7 +263,7 @@ class _RegisterState extends State<Register> {
                       const SizedBox(
                         height: 5,
                       ),
-                       const TextField(
+                      const TextField(
                         decoration: InputDecoration(
                             hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(
@@ -286,7 +284,7 @@ class _RegisterState extends State<Register> {
                       const SizedBox(
                         height: 5,
                       ),
-                       const TextField(
+                      const TextField(
                         decoration: InputDecoration(
                             hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(
@@ -307,7 +305,7 @@ class _RegisterState extends State<Register> {
                       const SizedBox(
                         height: 5,
                       ),
-                       const TextField(
+                      const TextField(
                         decoration: InputDecoration(
                             hintStyle: TextStyle(color: Colors.white),
                             border: OutlineInputBorder(

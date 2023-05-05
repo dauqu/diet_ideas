@@ -25,14 +25,12 @@ class _LoginState extends State<Login> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(
-                height: 100,
+                height: 50,
               ),
-              Container(
-                width: 100,
-                height: 100,
-                child: const Placeholder(
-                  color: Colors.white,
-                ),
+              SizedBox(
+                width: 150,
+                height: 150,
+                child: Image.asset("assets/images/101963.png"),
               ),
               const SizedBox(
                 height: 20,
