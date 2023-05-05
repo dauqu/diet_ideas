@@ -1,3 +1,4 @@
+import 'package:diet_ideas/pages/login.dart';
 import 'package:diet_ideas/pages/settings/dietitian_biodata.dart';
 import 'package:diet_ideas/pages/settings/my_accounts.dart';
 import 'package:diet_ideas/pages/settings/receipt.dart';
@@ -157,7 +158,7 @@ class _SettingsState extends State<Settings> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const DietitianBiodata(),
+                              builder: (context) => const Login(),
                             ),
                           );
                         },
