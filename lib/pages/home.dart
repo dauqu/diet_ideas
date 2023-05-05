@@ -31,8 +31,13 @@ class _HomeState extends State<Home> {
             ),
           ),
           backgroundColor: const Color(0xFFB8D8EB),
-          title: const Text('Hello, Masfara!',
-              style: TextStyle(color: Colors.black)),
+          title: Column(
+            children: const [
+              Text('Hello, Masfara!', style: TextStyle(color: Colors.black)),
+              Text('Today Wed, Dec 28',
+                  style: TextStyle(fontSize: 12, color: Color(0xFF0047BA))),
+            ],
+          ),
           centerTitle: true,
           actions: [
             IconButton(
@@ -59,6 +64,7 @@ class _HomeState extends State<Home> {
             child: Column(
           children: [
             Container(
+              padding: const EdgeInsets.all(10),
               height: 200,
               child: PageView(
                 scrollDirection: Axis.vertical,
@@ -67,8 +73,10 @@ class _HomeState extends State<Home> {
                     //Background image
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: NetworkImage(
-                            "https://assets.lybrate.com/q_auto:eco,f_auto,w_850/imgs/product/kwds/diet-chart/Diet-Chart-For-Kids-v1.jpg"),
+                        fit: BoxFit.cover,
+                        image: AssetImage(
+                          "assets/images/Group 101951.png",
+                        ), //Background image
                       ),
                     ),
                   ),
@@ -76,8 +84,10 @@ class _HomeState extends State<Home> {
                     //Background image
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: NetworkImage(
-                            "https://assets.lybrate.com/q_auto:eco,f_auto,w_850/imgs/product/kwds/diet-chart/Diet-Chart-For-Kids-v1.jpg"),
+                        fit: BoxFit.cover,
+                        image: AssetImage(
+                          "assets/images/Group 101951.png",
+                        ),
                       ),
                     ),
                   ),
@@ -85,8 +95,10 @@ class _HomeState extends State<Home> {
                     //Background image
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: NetworkImage(
-                            "https://assets.lybrate.com/q_auto:eco,f_auto,w_850/imgs/product/kwds/diet-chart/Diet-Chart-For-Kids-v1.jpg"),
+                        fit: BoxFit.cover,
+                        image: AssetImage(
+                          "assets/images/Group 101951.png",
+                        ),
                       ),
                     ),
                   ),
@@ -95,7 +107,7 @@ class _HomeState extends State<Home> {
             ),
 
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
 
             //GridView
