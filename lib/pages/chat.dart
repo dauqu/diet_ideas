@@ -45,6 +45,10 @@ class _ChatPageState extends State<ChatPage> {
             ),
             //List of conversations
             ListTile(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Message()));
+              },
               leading: SizedBox(
                 width: 50,
                 height: 50,
