@@ -1,4 +1,5 @@
 import 'package:diet_ideas/pages/feedback.dart';
+import 'package:diet_ideas/pages/find_diet_ideas.dart';
 import 'package:diet_ideas/pages/my_diet_program.dart';
 import 'package:diet_ideas/pages/my_diet_program_1.dart';
 import 'package:diet_ideas/pages/my_diet_program_2.dart';
@@ -155,29 +156,38 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                  Card(
-                    margin: const EdgeInsets.all(0),
-                    color: Color(0xFF6CCFAE),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/testimonials 1.png',
-                          width: 50,
-                          height: 50,
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        const Text(
-                          'Discover Diet Ideas',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FindDietIdeas()),
+                      );
+                    },
+                    child: Card(
+                      margin: const EdgeInsets.all(0),
+                      color: Color(0xFF6CCFAE),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/images/testimonials 1.png',
+                            width: 50,
+                            height: 50,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          const Text(
+                            'Discover Diet Ideas',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   GestureDetector(
