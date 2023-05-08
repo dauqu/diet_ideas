@@ -89,7 +89,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                   // },
                 ),
                 //Divider
-                Divider(
+                const Divider(
                   height: 10,
                   thickness: 1,
                   indent: 10,
@@ -118,8 +118,8 @@ class _NotificationsPageState extends State<NotificationsPage> {
                       ],
                     ),
                   ),
-                  subtitle: Text('You have a new message from admin'),
-                  trailing: Text("2.30h ago"),
+                  subtitle: const Text('You have a new message from admin'),
+                  trailing: const Text("2.30h ago"),
                   // onTap: () {
                   //   Navigator.pushNamed(context, '/account');
                   // },
@@ -154,9 +154,9 @@ class _NotificationsPageState extends State<NotificationsPage> {
                       ],
                     ),
                   ),
-                  subtitle:
-                      Text('Your service program has expired on 30/03/22'),
-                  trailing: Text("3h ago"),
+                  subtitle: const Text(
+                      'Your service program has expired on 30/03/22'),
+                  trailing: const Text("3h ago"),
                   // onTap: () {
                   //   Navigator.pushNamed(context, '/account');
                   // },

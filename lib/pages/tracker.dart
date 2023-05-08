@@ -1,6 +1,6 @@
 import 'package:diet_ideas/pages/daily_mean.dart';
-import 'package:diet_ideas/pages/meal_plan.dart';
 import 'package:diet_ideas/pages/notifications.dart';
+import 'package:diet_ideas/pages/weight_tracker.dart';
 import 'package:flutter/material.dart';
 
 class Tracker extends StatefulWidget {
@@ -141,29 +141,39 @@ class _TrackerState extends State<Tracker> {
                         ),
                       ),
                     ),
-                    Card(
-                      margin: const EdgeInsets.all(0),
-                      color: const Color(0xFFF06E7F),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assets/images/scale 1.png',
-                            width: 50,
-                            height: 50,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const WeightTracker(),
                           ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          const Text(
-                            'Weight Tracker',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                        );
+                      },
+                      child: Card(
+                        margin: const EdgeInsets.all(0),
+                        color: const Color(0xFFF06E7F),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/images/scale 1.png',
+                              width: 50,
+                              height: 50,
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            const Text(
+                              'Weight Tracker',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     GestureDetector(
